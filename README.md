@@ -2,12 +2,12 @@
 (Maze Game OOP Project)
 by Omer Shimoni & Or Meir Sarfati
 
-# General Explanation -
+# General Explanation
 In this project, we created a cat and mouse maze game in C++ using the SFML graphic library, using the principles we learned in object-oriented programming with an emphasis on encapsulation and the correct use of inheritance and polymorphism.
 
-# List of all files:
+# LIST OF ALL FILES
 
-# headers: (.h files)
+# headers (.h files)
 Cheese.h - This class holds the declarations for functions used to manage conflicts. 
 AddLifePresent.h- This class holds the declarations for functions used to manage conflicts.
 Door.h - This class holds the declarations for functions used to manage conflicts.
@@ -26,7 +26,7 @@ Menu.h - This class is responsible for the game menu and also starts the entire 
 ResourceManager.h - A singleton class that serves as a resource class that serves the entire program .
 Stats.h - This department is responsible for the information bar at the bottom of the screen and is responsible for presenting the user with the required information throughout the course of the game. 
 
-# Cpp:
+# Cpp
 Cheese.cpp - This file implements collision handling logic for a cheese object using polymorphism. 
 AddLifePresent.cpp - This file implements collision handling logic for an object adding life to the mouse using polymorphism. 
 Cat.cpp - This file contains the cat movement algorithm.
@@ -47,7 +47,7 @@ ResourceManager.cpp - This file contains an implementation of hash tables contai
 Stats.cpp - This file contains the line of information that appears during the game at the bottom of the screen and is updated according to the progress of the game.
 
 
-# Main data structures (and their locations):
+# Main data structures (and their locations)
 Level.h -
 A vector into which all the existing objects in the game are loaded and through which an appeal is made to each of them through polymorphism.
 In addition, this class contains a Boolean matrix that represents obstacles on the map and is used by the cat's algorithm.
@@ -56,9 +56,9 @@ Hash table responsible for all textures in the game.
 Hash table responsible for all sounds in the game.
 The hash tables optimize the runtime for texture/sound retrieval whenever such an operation is required.
 
-# Noteworthy algorithms:
+# Noteworthy algorithms
 Cat.h - we decided that the movement of the cats will be done using the BFS algorithm.
-High School :
+# Design
 The various objects in the program:
 Gifts: gift of extra life, gift of freezing a cat, gift of extra time, gift of killing a cat.
 Objects: key, cheese.
@@ -68,11 +68,11 @@ Each of these objects is responsible for himself and himself only and his role i
 Regarding the way of communication between the objects in the game -
 The communication between the objects is carried out using double dispatch because it is not known which object we would like to communicate with at each stage, the communication method taught in class is chosen.
 
-# Known bugs:
+# Known bugs
 - In cats: the cats in their movement partially 'cover' the walls. we were able to understand the source of the problem (for the cat, the displacement algorithm refers to the pixel that is the center of the cat, but for the road - for it, all the pixels that are in the space between two walls are normal pixels to pass, and thus a situation is created in which the cat chooses the pixel closest to the wall and is displayed like this whose half exceeds it), we were unable to write the code differently in a way that would solve the problem.
 In addition, the cats sometimes get stuck suddenly.
 - When loading stages: after the first stage one of the game squares will appear in black, in a random way that we could not understand.
 
-# Other comments:
+# Other comments
 We did not release dynamically allocated memory, the plan is to change the pointers to smart pointers in a way that will eliminate the need for it.
 In some places it was appropriate to split into additional functions. Sometimes we decided not to split, thinking that everything would be more readable and understandable as one block.
