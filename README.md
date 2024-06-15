@@ -1,7 +1,6 @@
-# The-Amazing-Maze Game
-# Maze game OOP Project!
-
-# Omer Shimoni & Or Meir Sarfati
+# The-Amazing-Maze Game!
+(Maze Game OOP Project)
+Omer Shimoni & Or Meir Sarfati
 
 # General Explanation -
 In this project, we created a cat and mouse maze game in C++ using the SFML graphic library, using the principles we learned in object-oriented programming with an emphasis on encapsulation and the correct use of inheritance and polymorphism.
