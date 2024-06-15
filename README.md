@@ -69,5 +69,11 @@ Each of these objects is responsible for himself and himself only and his role i
 Regarding the way of communication between the objects in the game -
 The communication between the objects is carried out using double dispatch because it is not known which object we would like to communicate with at each stage, the communication method taught in class is chosen.
 
-Known bugs:
-In cats: the cats in their movement 'go up' partially on the walls. With the help of Michal, we were able to understand the source of the problem (for the cat, the displacement algorithm refers to the pixel that is the center of the cat, but for the road - for it, all the pixels that are in the space between two walls are normal pixels to pass, and thus a situation is created in which the cat chooses the pixel closest to the wall and is displayed like this whose half exceeds it), we were unable to write the code differently in a way that would solve the problem.
+# Known bugs:
+- In cats: the cats in their movement partially 'cover' the walls. we were able to understand the source of the problem (for the cat, the displacement algorithm refers to the pixel that is the center of the cat, but for the road - for it, all the pixels that are in the space between two walls are normal pixels to pass, and thus a situation is created in which the cat chooses the pixel closest to the wall and is displayed like this whose half exceeds it), we were unable to write the code differently in a way that would solve the problem.
+In addition, the cats sometimes get stuck suddenly.
+- When loading stages: after the first stage one of the game squares will appear in black, in a random way that we could not understand.
+
+# Other comments:
+We did not release dynamically allocated memory, the plan is to change the pointers to smart pointers in a way that will eliminate the need for it.
+In some places it was appropriate to split into additional functions. Sometimes we decided not to split, thinking that everything would be more readable and understandable as one block.
